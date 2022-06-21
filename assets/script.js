@@ -1,4 +1,4 @@
-let hands = ['rock', 'paper', 'scissors'];
+let hands = ['rock', 'paper', 'scissors']; 
 
 function computerPlay() {
   return Math.floor(Math.random() * 3);
@@ -20,8 +20,15 @@ function userPlay() {
 }
 
 function playRound(computerHand, userHand) {
-  //computer rock, player scissors
-
+  //computer rock 0, player scissors 2
+  let result = computerHand > userHand ? (Math.abs(computerHand - userHand) + 1) : Math.abs(computerHand - userHand);
+  
+  switch (result) {
+    case 0: return 'tie';
+    case 1: return false;
+    case 2: return true;
+    case 3: return false;
+  }
 }
 
 function game() {
@@ -33,3 +40,9 @@ function game() {
 // If the index is the same, tie
 // If one hand is 1 index less than the other hand, then that hand loses(different for scissors)
 // Visa versa for a win(different for rock)
+// rock 0, paper 1: 1
+// paper 1, rock 0: 2
+// 0, 2: 2
+// 2, 0: 3, 1
+// 1, 2: 1
+// 2, 1: 2
