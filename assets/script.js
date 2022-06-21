@@ -1,7 +1,7 @@
 let hands = ['rock', 'paper', 'scissors'];
 
 function computerPlay() {
-  return hands[Math.floor(Math.random() * 3)];
+  return Math.floor(Math.random() * 3);
 }
 
 function userPlay() {
@@ -16,14 +16,20 @@ function userPlay() {
     if (hands.includes(result)) { userChoice = result; }
   }
 
-  return result;
+  return hands.indexOf(userChoice);
 }
 
 function playRound(computerHand, userHand) {
-  
+  //computer rock, player scissors
+
 }
 
 function game() {
   let userWins = 0;
   let computerWins = 0;
 }
+
+// To determine a winner, use the indices of the hands
+// If the index is the same, tie
+// If one hand is 1 index less than the other hand, then that hand loses(different for scissors)
+// Visa versa for a win(different for rock)
