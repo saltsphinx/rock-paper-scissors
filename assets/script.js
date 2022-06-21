@@ -34,6 +34,31 @@ function playRound(computerHand, userHand) {
 function game() {
   let userWins = 0;
   let computerWins = 0;
+
+  for (let i = 1; i <= 5; i++) {
+    let computerHand = computerPlay();;
+    let userHand = userPlay();
+    let result = playRound(computerHand, userHand);
+
+    console.log(`Computer: ${hands[computerHand]}, Player: ${hands[userHand]}`)
+    if (result == true) {
+      console.log('The computer wins!')
+      computerWins++;
+    } else if (result == false) {
+      console.log('You win!')
+      userWins++;
+    } else {
+      console.log('Theres a tie!')
+      userWins++;
+      computerWins++;
+    }
+  }
+
+  if (userWins > computerWins) {
+    console.log('You\'ve won!');
+  } else {
+    console.log('You lose...');
+  }
 }
 
 // To determine a winner, use the indices of the hands
