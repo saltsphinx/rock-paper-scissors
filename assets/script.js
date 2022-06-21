@@ -22,3 +22,8 @@ function userPlay() {
 function playRound(computerHand, userHand) {
   
 }
+
+function game() {
+  let userWins = 0;
+  let computerWins = 0;
+}
