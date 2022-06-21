@@ -1,7 +1,7 @@
 let hands = ['rock', 'paper', 'scissors'];
 
 function computerPlay() {
-  return hands[Math.floor(Math.random() * 3 + 1)];
+  return hands[Math.floor(Math.random() * 3)];
 }
 
 function userPlay() {
