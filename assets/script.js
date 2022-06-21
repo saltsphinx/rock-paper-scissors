@@ -16,7 +16,9 @@ function userPlay() {
     if (hands.includes(result)) { userChoice = result; }
   }
 
-  function playRound(computerHand, userHand) {
-    
-  }
+  return result;
+}
+
+function playRound(computerHand, userHand) {
+  
 }
