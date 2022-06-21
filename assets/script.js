@@ -42,10 +42,10 @@ function game() {
 
     console.log(`Computer: ${hands[computerHand]}, Player: ${hands[userHand]}`)
     if (result == true) {
-      console.log('The computer wins!')
+      console.log('The computer wins!');
       computerWins++;
     } else if (result == false) {
-      console.log('You win!')
+      console.log('You win!');
       userWins++;
     } else {
       console.log('Theres a tie!')
@@ -56,8 +56,10 @@ function game() {
 
   if (userWins > computerWins) {
     console.log('You\'ve won!');
-  } else {
+  } else if (userWins < computerWins) {
     console.log('You lose...');
+  } else {
+    console.log('Somehow there was a tie!');
   }
 }
 
